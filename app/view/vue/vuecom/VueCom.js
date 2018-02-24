@@ -1,0 +1,74 @@
+Ext.define("app.view.vue.vuecom.VueCom",{
+    extend:"Ext.window.Window",
+    requires:[
+        "Fm.ux.Ueditor",
+        "app.view.vue.vuecom.VueComController",
+        "app.view.vue.vuecom.VueComModel"
+    ],
+    controller:'vueComController',
+    viewModel: {
+        type: 'vueComModel'
+    },
+    title:"添加组件",
+    width:500,
+    height:400,
+    layout:{
+        type:"table",
+        columns:1
+    },
+    defaults:{
+        width:450,
+        labelWidth:60,
+        labelAlign:'right',
+        margin:"5px 0 5px 0"
+    },
+    items:[
+        {
+            xtype:"textfield",
+            fieldLabel:"组件名称",
+            bind:'{vueCom.comName}'
+        },{
+            xtype:"fieldcontainer",
+            height:200,
+            layout:{
+                type:"table",
+                column:2
+            },
+            items:[
+                {
+                    xtype:"displayfield",
+                    fieldLabel:"组件简介",
+                    labelAlign:'right',
+                    labelWidth:60
+                },{xtype:"ueditor",
+                    height:200,
+                    width:383,
+                    ueditorConfig:{
+                        toolbars:[],
+                        pasteplain:true
+                    }
+            }
+            ]
+            
+        }
+    ],
+    initComponent:function(){
+        var me=this;
+        me.bbar=[
+            "->",
+            {
+                xtype:"button",
+                text:"确定" ,
+                handler:"ok"
+            },{
+                xtype:'button',
+                text:"取消",
+                handler:function(){
+                    this.close();
+                },
+                scope:this
+            }
+        ]
+        me.callParent(arguments);
+    }
+});

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+
+    <title>blogExt</title>
+    <script type="text/javascript">
+        var AppConfig={
+            //项目根目录，物理路径
+            appUrl:"./",
+            //view页面路径
+            appName:"webapp",
+            //项目版本
+            appVersion:"1.0.0",
+            //项目默认打开页
+            defaultMenuId:"100",
+            Design:{
+                Menu:{
+                    Pressed:false,
+                    //左边路由部分的宽度
+                    MaxWidth:200,
+                    MinWidth:40
+                }
+            }
+        };
+        var application=true;
+        var ServerData={
+            MenuList:[{
+                            Handler:"openNewTab",
+                            iconCls:"fa fa-home",
+                            Id:'100',
+                            ParentId:'0',
+                            MenuView:"app.view.vue.Vue",
+                            text:"首页",
+                            leaf:true
+                        },{
+                            Handler:"openNewTab",
+                            iconCls:"fa fa-home",
+                            Id:'200',
+                            ParentId:'0',
+                            MenuView:"app.view.vue.Vue",
+                            text:"首页",
+                            leaf:false,
+                            children:[
+                            {
+                            Handler:"openNewTab",
+                            iconCls:"fa fa-home",
+                            Id:'300',
+                            ParentId:'0',
+                            MenuView:"app.view.vue.Vue",
+                            text:"首页",
+                            leaf:true
+                        },{
+                            Handler:"openNewTab",
+                            iconCls:"fa fa-home",
+                            Id:'400',
+                            ParentId:'0',
+                            MenuView:"app.view.vue.Vue",
+                            text:"首页",
+                            leaf:true
+                        }
+                            ]
+                        }],
+            UserName:"Stauts404"
+                    }
+    </script>
+    <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+    <script id="microloader" data-app="15c58559-3d23-422a-9104-1f4439993604" type="text/javascript" src="bootstrap.js"></script>
+
+</head>
+<body></body>
+</html>

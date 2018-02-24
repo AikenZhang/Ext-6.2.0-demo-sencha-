@@ -1,0 +1,33 @@
+/**
+ * Generates a set of style rules for the "navigation" tab UI.
+ */
+$nav-font-color:#d2d2d2;
+$nav-font-color-over:#fff;
+$nav-font-size:16px;
+$nav-background-color:#2aa88f;
+$nav-item-over:#259780;
+$nav-background-over:#218672;
+.x-treelist-blogNav{
+    background: $nav-background-color
+}
+.x-treelist-blogNav .x-treelist-item-icon,.x-treelist-blogNav .x-treelist-item-text,.x-treelist-blogNav .x-treelist-item-expander{
+    height:45px;
+    line-height: 45px;
+    color:$nav-font-color
+}
+.x-treelist-blogNav .x-treelist-row-over{
+    background:$nav-background-over
+}
+.x-treelist-blogNav .x-treelist-item-icon,.x-treelist-blogNav .x-treelist-item-text{
+    color:$nav-font-color
+}
+.x-treelist-blogNav .x-treelist-item-selected > .x-treelist-row{
+    background:$nav-background-over
+}
+.x-treelist-blogNav .x-treelist-container,.x-treelist-blogNav .x-treelist-item-selected-parent{
+    background:$nav-item-over
+}
+.x-container-blogContainer{
+    margin:0 15px;
+    background: #f2f2f2;
+}
